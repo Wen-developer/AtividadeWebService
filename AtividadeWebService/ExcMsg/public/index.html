@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio Javascript</title>
+</head>
+<body onload="carregar()"> 
+    <header>
+        <h1>Mensagem do Dia</h1>
+    </header>
+    <section>
+        <h1>Mensagens</h1>
+        <div id="mensagem"></div>
+    <script >
+           function exibirMensagem(numero) {
+            fetch(`/mensagem/${numero}`)
+                .then(response => response.json())
+                .then(data => {
+                    const mensagemDiv = document.getElementById('mensagem');
+                    mensagemDiv.innerText = data.mensagem;
+                })
+                .catch(error => console.error('Erro:', error));
+        }
+    </script>
+</body>
+</html>

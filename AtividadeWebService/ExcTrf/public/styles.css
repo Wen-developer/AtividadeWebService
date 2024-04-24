@@ -1,0 +1,25 @@
+body {
+  background-color: rgb(172, 157, 136);
+  color:white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+#tarefas-list {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+ .task-item {
+    margin-bottom: 10px;
+  }
+  
+  .task-text {
+    font-size: 16px;
+  }
+  
+  .task-checkbox {
+    margin-right: 10px;
+  }
+  
